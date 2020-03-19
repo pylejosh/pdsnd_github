@@ -171,6 +171,10 @@ def display_raw_data(df):
         display = input("Would you like to display 5 more rows of raw data? (Y/N) ").title()
     
 def main():
+    """This overall function combines the functionality of all previously-built functions; 
+    that is, given a user-selected city, month, and day of the week, this function will return
+    a variety of statistics on demographics and popular trip stations and routes."""
+    
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
