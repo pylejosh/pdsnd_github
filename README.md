@@ -1,15 +1,17 @@
 ### Date created
-Include the date you created this project and README file.
+March 18, 2020
 
 ### Project Title
-Replace the Project Title
+US Bikeshare Project
 
 ### Description
-Describe what your project is about and what it does
+This project examines data for the first half of the year across 3 cities: Chicago, Washington D.C., and New York City.  The project computes key metrics like average trip length, popular stations and routes, demographic information of those participating in the bikeshare program, and even raw data in the event the user requests it.
 
 ### Files used
-Include the files used
+* chicago.csv
+* washington.csv
+* new_york_city.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+No blogs were influential in inspiring this project, but huge props to Udacity for creating this course.  This GitHub repo was forked for the purposes of this project: https://github.com/udacity/pdsnd_github
 
