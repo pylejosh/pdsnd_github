@@ -74,17 +74,17 @@ def time_stats(df):
     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     
     # display the most common month
-    popular_month = df['month'].mode()[0]
-    print("The most popular month is: ",months[popular_month-1].title())
+    most_popular_month = df['month'].mode()[0]
+    print("The most popular month is: ",months[most_popular_month-1].title())
     
     # display the most common day of week
-    popular_day = df['day_of_week'].mode()[0]
-    print("The most popular day of the week is: ",days[popular_day])
+    most_popular_day = df['day_of_week'].mode()[0]
+    print("The most popular day of the week is: ",days[most_popular_day])
     
     # display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
-    popular_hour = df['hour'].mode()[0]
-    print("The most popular hour is: ",popular_hour)
+    most_popular_hour = df['hour'].mode()[0]
+    print("The most popular hour is: ",most_popular_hour)
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -96,16 +96,16 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-    popular_start = df['Start Station'].mode()[0]
-    print("The most popular station to begin a trip is: ",popular_start)
+    most_popular_start = df['Start Station'].mode()[0]
+    print("The most popular station to begin a trip is: ",most_popular_start)
     
     # display most commonly used end station
-    popular_end = df['End Station'].mode()[0]
-    print("The most popular station to end a trip is: ",popular_end)
+    most_popular_end = df['End Station'].mode()[0]
+    print("The most popular station to end a trip is: ",most_popular_end)
     
     # display most frequent combination of start station and end station trip
-    popular_trip = df.groupby(['Start Station','End Station']).size().sort_values(ascending=False)[0:1]
-    print("The most popular trip is shown below: \n",popular_trip)
+    most_popular_trip = df.groupby(['Start Station','End Station']).size().sort_values(ascending=False)[0:1]
+    print("The most popular trip is shown below: \n",most_popular_trip)
     
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
